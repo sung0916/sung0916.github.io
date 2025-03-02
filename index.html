@@ -1,5 +1,105 @@
-<html>
-  <body>
-    Hello World
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        ul, li {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        #tab-menu {
+            border: 1px solid #ddd;
+            width: 605px;
+            overflow: hidden;
+            height: 600px; /*넘쳐서 hidden 된 정보들이 다시 나옴*/
+
+            /*relative를 함으로써 tab-menu>div의 좌표가 메뉴 ul로 잡히고 overflow가 hidden으로 넘친 정보들은 숨김처리되었다.
+              추가 이해 필요.. ★★★★★★★★★★★*/
+            position: relative;
+        }
+        #tab-menu>ul>li {
+            float: left;
+            height: 50px;
+            line-height: 50px;
+            padding-right: 20px;
+        }
+        #tab-menu>div {
+            /*
+            position의 속성
+            -static(기본값)
+            -absolute(자리차지 안함)
+            -relative(자리차지함)
+            -fixed(한곳에 고정되지만 스크롤을 따라다님)
+            */
+            position: absolute;
+            left: 0px;
+            top: 70px;
+        }
+
+        /*radio 버튼과 컨텐츠 div속성이 안보이도록 설정*/
+        input[name=tab], #tab-menu>div/*tab-menu의 자손*/ {
+            display: none;
+        }
+        
+        /*선택된 tab-menu 보여주기*/
+        #m1:checked~div:nth-of-type(1) {display: block;}
+        #m2:checked~div:nth-of-type(2) {display: block;}
+        #m3:checked~div:nth-of-type(3) {display: block;}
+        #m4:checked~div:nth-of-type(4) {display: block;}
+        #m5:checked~div:nth-of-type(5) {display: block;}
+        #m6:checked~div:nth-of-type(6) {display: block;}
+        #m7:checked~div:nth-of-type(7) {display: block;}
+        #m8:checked~div:nth-of-type(8) {display: block;}
+        #m9:checked~div:nth-of-type(9) {display: block;}
+        #m10:checked~div:nth-of-type(10) {display: block;}
+    </style>
+</head>
+
+<body>
+    <div id="tab-menu">
+        <!--메뉴-->
+        <!--label for에 id를 입력해서 기능을 연결해준다.-->
+        <ul>
+            <li><label for="m1">블로그</label></li>
+            <li><label for="m2">카페</label></li>
+            <li><label for="m3">팁</label></li>
+            <li><label for="m4">지식공간</label></li>
+            <li><label for="m5">영화</label></li>
+            <li><label for="m6">뮤직</label></li>
+            <li><label for="m7">웹툰</label></li>
+            <li><label for="m8">스토리볼</label></li>
+            <li><label for="m9">브런치</label></li>
+            <li><label for="m10">게임</label></li>
+        </ul>
+
+        <!--하나만 선택될 수 있도록 name을 하나로 통일한다.-->
+        <!--위의 메뉴와 순서대로 id와 연동하고 radio버튼은 숨긴다.-->
+        <input type="radio" name="tab" id="m1" checked/> <!--처음에 뭐라도 나올 수 있도록 하나는 check해놓는다.-->
+        <input type="radio" name="tab" id="m2"/>
+        <input type="radio" name="tab" id="m3"/>
+        <input type="radio" name="tab" id="m4"/>
+        <input type="radio" name="tab" id="m5"/>
+        <input type="radio" name="tab" id="m6"/>
+        <input type="radio" name="tab" id="m7"/>
+        <input type="radio" name="tab" id="m8"/>
+        <input type="radio" name="tab" id="m9"/>
+        <input type="radio" name="tab" id="m10"/>
+
+        <!--페이지내용-->
+        <div ><img src="./tab1.png"></div>
+        <div ><img src="./tab2.png"></div>
+        <div ><img src="./tab3.png"></div>
+        <div ><img src="./tab4.png"></div>
+        <div ><img src="./tab5.png"></div>
+        <div ><img src="./tab6.png"></div>
+        <div ><img src="./tab7.png"></div>
+        <div ><img src="./tab8.png"></div>
+        <div ><img src="./tab9.png"></div>
+        <div ><img src="./tab10.png"></div>
+    </div>    
+</body>
 </html>
