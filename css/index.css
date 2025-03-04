@@ -9,6 +9,7 @@
 #navi>ul {
   display: flex;
   width: 100%;
+  margin: 0 auto;
 }
 
 #navi>ul>li {
