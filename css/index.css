@@ -1,3 +1,23 @@
 .container {
-  background-color: black;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(20, 20, 20);
+  color: beige;
+  margin: 0 auto;
 }
+
+#navi>ul {
+  display: flex;
+  width: 100%;
+}
+
+#navi>ul>li {
+  list-style-type: none;
+  text-align: center;
+  font-family: "Rampart One", sans-serif;
+  font-style: normal;
+  width: 25%;
+  text-align: center;
+}
+
+
