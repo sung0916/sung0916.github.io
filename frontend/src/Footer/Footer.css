@@ -1,0 +1,26 @@
+.footer-container {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 100px;
+    line-height: 95px;
+    background-color: rgb(255, 242, 216);
+    opacity: 0.3;
+    text-align: center;
+}
+
+/*div안의 글자나 그림은 opacity 안주고 컨테이너에만 opacity주는거 찾아보기*/
+/* .footer-container::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    opacity: 0.3;
+    z-index: -1;
+} */
+
+/*footer-container위에 배치시키기*/
+ .footer-content {
+    position: relative;
+    color: rgb(28, 51, 184);
+    z-index: 1;
+} 

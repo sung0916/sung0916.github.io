@@ -1,0 +1,12 @@
+.whole-container {
+    height: 99.9vh;
+    background-image: url(../Images/background-img.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: right;
+}
