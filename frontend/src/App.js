@@ -4,8 +4,6 @@ import Layout from './Layout/Layout';
 
 function App() {
 
-
-
     return (
         <Routes>
             <Route path='/' element={<Layout/>}>
