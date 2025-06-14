@@ -1,0 +1,16 @@
+#mp_imgs {
+    width: 100%;
+    text-align: center;
+}
+
+#mp_imgs>img {
+    width: 30%;
+    border-radius: 10px;
+    transition: all 0.400s;
+    cursor: pointer;
+}
+
+#mp_imgs>img:hover {
+    transform: scale(1.2);
+    transition: all 0.400s;
+}

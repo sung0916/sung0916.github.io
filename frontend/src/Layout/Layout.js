@@ -16,7 +16,9 @@ function Layout() {
                 <NaviIcon/>
             </div>
             
-            <Outlet/>
+            <main className="main-container">
+                <Outlet/>
+            </main>
 
             <Footer/>
         </div>
