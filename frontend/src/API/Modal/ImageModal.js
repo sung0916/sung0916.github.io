@@ -14,7 +14,7 @@ function ImageModal({images, initialIndex, onClose}) {
 
     //이전 이미지 보기(배열 처음이면 끝으로)
     const showPrev = useCallback(() => {
-        setCurrentIndex((prev) => (prev+1)%images.length);
+        setCurrentIndex((prev) => (prev-1)%images.length);
     }, [images.length]);
 
     //키보드 이벤트 처리
@@ -56,8 +56,8 @@ function ImageModal({images, initialIndex, onClose}) {
                 <img src={currentImage.src} className='carousel-image'/>
 
                 <div>
-                    <button className="carousel-button prev" onClick={showPrev}>❮</button>
-                    <button className="carousel-button next" onClick={showNext}>❯</button>
+                    <button className="carousel-button prev" onClick={showPrev}></button>
+                    <button className="carousel-button next" onClick={showNext}></button>
                 </div>
 
                 {/* 페이지네이션 (예: 2 / 3) */}
