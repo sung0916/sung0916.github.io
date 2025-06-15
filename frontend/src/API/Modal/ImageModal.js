@@ -14,7 +14,7 @@ function ImageModal({images, initialIndex, onClose}) {
 
     //이전 이미지 보기(배열 처음이면 끝으로)
     const showPrev = useCallback(() => {
-        setCurrentIndex((prev) => (prev-1)%images.length);
+        setCurrentIndex((prev) => (prev-1+images.length)%images.length);
     }, [images.length]);
 
     //키보드 이벤트 처리
@@ -48,14 +48,16 @@ function ImageModal({images, initialIndex, onClose}) {
                  e.stopPropagation()을 사용
             */}
             <div className='modal-content' onClick={(e) => e.stopPropagation()}>
-                <div className='modal_state'>
-                    <img src={green}/>
-                    <img src={red} onClick={onClose}/>
+                <div className='modal-state'>
+                    <img src={green} title='크게 보기'/>
+                    <img src={red} onClick={onClose} title='닫기'/>
                 </div>
 
-                <img src={currentImage.src} className='carousel-image'/>
+                <div id='img-box'>
+                    <img src={currentImage.src} className='carousel-image'/>
+                </div>
 
-                <div>
+                <div style={{textAlign:'center'}}>
                     <button className="carousel-button prev" onClick={showPrev}></button>
                     <button className="carousel-button next" onClick={showNext}></button>
                 </div>
