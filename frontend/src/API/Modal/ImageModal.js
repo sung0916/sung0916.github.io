@@ -58,8 +58,12 @@ function ImageModal({images, initialIndex, onClose}) {
                 </div>
 
                 <div style={{textAlign:'center'}}>
-                    <button className="carousel-button prev" onClick={showPrev} title='이전'></button>
-                    <button className="carousel-button next" onClick={showNext} title='다음'></button>
+                    <button className="carousel-button prev" onClick={showPrev} title='이전'>
+                        <img src='/Images/prev.png'/>
+                    </button>
+                    <button className="carousel-button next" onClick={showNext} title='다음'>
+                        <img src='/Images/next.png'/>
+                    </button>
                 </div>
 
                 {/* 페이지네이션 (예: 2 / 3) */}

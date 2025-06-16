@@ -1,4 +1,5 @@
 import './About.css';
+import '../../Layout.css';
 
 function About() {
 

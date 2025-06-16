@@ -15,16 +15,17 @@
 /* 모달 콘텐츠 영역 */
 .modal-content {
   position: relative; /* 버튼들의 위치 기준점 */
-  background-color: transparent;
+  /* background-color: transparent; */
+  background-color: rgba(255, 255, 255, 0.658);
   padding: 20px;
   border-radius: 20px;
   width: 70%;
+  min-width: 520px;
   max-width: 85vw;
   height: 600px;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  border: 2px solid black;
   box-shadow: 5px 5px 3px #666
 }
 
@@ -70,24 +71,21 @@
 
 /* 이전/다음 버튼 공통 스타일 */
 .carousel-button {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: transparent;
   border: none;
-  font-size: 2rem;
   cursor: pointer;
-  padding: 10px;
-  margin: 20px 10px 0;
-  border-radius: 50%;
+  margin: 0 20px;
   user-select: none; /* 텍스트 드래그 방지 */
 }
 
-.carousel-button:hover {
-  background-color: rgba(255, 255, 255, 0.8);
+.carousel-button>img {
+  width: 40px;
 }
 
 /* 페이지 번호 */
 .carousel-pagination {
   position: absolute;
-  bottom: 20px;
+  bottom: 50px;
   left: 90%;
   transform: translateX(-50%);
   background-color: rgba(0, 0, 0, 0.5);
