@@ -1,0 +1,73 @@
+.welcome-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; /* 스크롤바가 생기지 않도록 함 */
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.welcome-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; /* 다른 콘텐츠보다 뒤에 있도록 설정 */
+    transform: translateX(-50%) translateY(-50%);
+    transition: filter 0.7s ease-in-out;
+}
+
+/* 상호작용 시 비디오에 적용될 blur 클래스 */
+.welcome-video.blur {
+    filter: blur(5px) brightness(0.7); /* 블러와 함께 약간 어둡게 처리하여 텍스트 가독성 향상 */
+}
+
+.welcome-content {
+    position: relative;
+    top: 25%;
+    /* 나타날 때 부드러운 애니메이션 효과 */
+    animation: fadeIn 1s ease-in-out;
+    z-index: 1; /* 비디오보다 앞에 있도록 설정 */
+}
+
+.welcome-content h1 {
+    font-family: "Playfair Display", serif;;
+    font-size: 4rem;
+    letter-spacing: 0.06em;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* 텍스트가 잘 보이도록 그림자 추가 */
+}
+
+.welcome-content button {
+    font-size: 1.3rem;
+    padding: 0.5rem 2.5rem;
+    border-radius: 50px;
+    border: 2px solid white;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.welcome-content button:hover {
+    background-color: white;
+    color: black;
+}
+
+/* 페이드인 애니메이션 정의 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

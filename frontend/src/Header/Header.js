@@ -7,7 +7,7 @@ function Header() {
     return (
         <div className="header-container">
             <div className='logo-container'>
-                <Link to='/'><img src={mieum} className='to-home' title='홈으로'/></Link>
+                <Link to='/main'><img src={mieum} className='to-home' title='홈으로'/></Link>
             </div>
             <div className='log-container'>
 

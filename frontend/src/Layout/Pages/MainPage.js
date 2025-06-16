@@ -31,7 +31,7 @@ function MainPage() {
     } ;
 
     return (
-        <div>
+        <div className='page-container'>
             <div id='mp_imgs'>
                 {imageList.map((image, index) => (
                     <img key={image.no}

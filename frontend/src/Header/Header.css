@@ -1,5 +1,6 @@
 .header-container {
     width: 100%;
+    min-width: 500px;
     height: 55px;
     line-height: 55px;
 }

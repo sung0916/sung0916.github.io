@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Navi.css';
 
 function Navi() {
@@ -6,7 +7,7 @@ function Navi() {
 
     return (
         <ul id="nav">
-            <li><a title='성광식?'>About</a></li>
+            <li><Link to="/main/about" title='성광식?'>About</Link></li>
             <li><a title='기술스택'>Skills</a></li>
             <li><a title='포트폴리오'>Portfolio</a></li>
             <li><a title='발자취'>Footprint</a></li>
