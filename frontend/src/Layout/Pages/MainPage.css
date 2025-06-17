@@ -1,40 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Chiron+Sung+HK:ital,wght@0,200..900;1,200..900&family=Gamja+Flower&family=Gothic+A1&family=Jua&family=Noto+Sans+KR:wght@350&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://webfontworld.github.io/t money/TmoneyRoundWind.css');
+
 .page-container {
     overflow: hidden;
-    padding: 50px 50px;
+    padding: 10px 30px;
 }
 
-#mp_imgs {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    height: 300px;
-    text-align: center;
+#resume-box {
+    min-width: 650px;
+    padding: 0 8px 8px 8px;
+    text-align: right;
 }
 
-#mp_imgs>img {
-    position: absolute;
-    width: 30%;
-    height: 100%;
-    object-fit: contain;
-    border-radius: 10px;
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+.download-btn {
+    font-family: "Chiron Sung HK", serif;
+    color: rgb(255, 255, 208);
+    font-weight: 300;
+    text-decoration: none;
     cursor: pointer;
 }
 
-#mp_imgs > img:nth-child(1) { left: 15%; }
-#mp_imgs > img:nth-child(2) { left: 25%; }
-#mp_imgs > img:nth-child(3) { left: 35%; }
-#mp_imgs > img:nth-child(4) { left: 45%; }
-#mp_imgs > img:nth-child(5) { left: 55%; }
-
-#mp_imgs>img:hover {
-    transform: scale(1.2);
-    transition: all 0.400s;
+.download-btn:hover {
+    cursor: pointer;
+    color: yellowgreen;
+    transition: all 0.4s;
 }
 
-#mp_imgs > img:hover ~ img {
-    /* 호버된 이미지의 오른쪽에 있는 모든 형제 img들을 오른쪽으로 10% 더 밀어냄 */
-    transform: translateX(20%);
+.files-box {
+    min-width: 650px;
+    margin: 0 auto;
+    border: 2px solid #a8a8a8;
+    border-radius: 20px;
+    height: 600px;
+}
+
+.files-box>h2 {
+    margin: 17px auto;
+    text-align: center;
+    font-family: "Chiron Sung HK", serif;
+    color: rgb(255, 255, 208);
+    font-weight: 300;
+}
+
+.project-box {
+    width: 95%;
+    margin: 17px auto;
+    border-bottom: 1px dashed #a8a8a8;
+}
+
+.project-detail {
+    padding: 10px 0 10px 10px;
+    font-family: 'TmoneyRoundWind';
+    font-weight: 500;
+    font-style: normal;
+    color: rgb(206, 206, 206);
 }
