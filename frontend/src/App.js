@@ -4,6 +4,7 @@ import Layout from './Layout/Layout';
 import MainPage from './Layout/Pages/MainPage';
 import Welcome from './WelcomePage/Welcome';
 import About from './Layout/Pages/About/About';
+import Private from './Layout/Pages/Private/Private';
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
             <Route path='/main' element={<Layout/>}>
                 <Route index element={<MainPage/>}/>
                 <Route path='about' element={<About/>}/>
+                <Route path='private' element={<Private/>}/>
             </Route>
         </Routes>
     );

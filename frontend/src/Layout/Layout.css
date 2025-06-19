@@ -1,4 +1,4 @@
-.whole-container {
+/* .whole-container {
     min-width: 500px;
     height: 99.9vh;
     background-image: url(../Images/background-img.jpg);
@@ -16,4 +16,50 @@
     width: 90%;
     height: 70vh;
     margin: 0 auto;
+}
+
+@media (max-width: 800px) {
+    .whole-container {
+        height: auto;
+        min-height: 100vh;
+    }
+} */
+
+.whole-container {
+    position: relative; /* 가상 요소 배치 기준점 */
+    min-width: 500px;
+    min-height: 100vh; /* 최소 높이 */
+}
+
+.whole-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* 부모 요소 높이에 맞춰짐 */
+    background-image: url(../Images/background-img.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1; /* 콘텐츠 뒤에 배치 */
+}
+
+.nav-container {
+    display: flex;
+    justify-content: right;
+}
+
+.main-container {
+    width: 90%;
+    min-height: 70vh;
+    margin: 0 auto;
+    padding-bottom: 130px;
+}
+
+@media (max-width: 800px) {
+    .whole-container {
+        height: auto;
+        min-height: 100vh;
+    }
 }

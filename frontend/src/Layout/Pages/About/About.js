@@ -11,19 +11,19 @@ function About() {
 
                 <ul id='profile-story'>
                     <li>
-                        <div>Name</div>
+                        <div className='profile-category'>Name</div>
                         <div>성광식</div>
                     </li>
                     <li>
-                        <div>Birth</div>
+                        <div className='profile-category'>Birth</div>
                         <div>1992.09.16 / 2:55pm</div>
                     </li>
                     <li>
-                        <div>Home</div>
+                        <div className='profile-category'>Home</div>
                         <div>서울특별시 동대문구</div>
                     </li>
                     <li>
-                        <div>Tel</div>
+                        <div className='profile-category'>Tel</div>
                         <div>+82 10 5043 2501</div>
                     </li>
                     <li id='more-info'>

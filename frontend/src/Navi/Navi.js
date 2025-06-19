@@ -11,7 +11,7 @@ function Navi() {
             <li><a title='기술스택'>Skills</a></li>
             <li><a title='포트폴리오'>Portfolio</a></li>
             <li><a title='발자취'>Footprint</a></li>
-            <li><a title='개인정보'>Private</a></li>
+            <li><Link to="/main/private"  title='개인정보'>Private</Link></li>
         </ul>
     );
 }
