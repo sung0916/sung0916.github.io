@@ -3,7 +3,7 @@ function Private() {
 
     return (
         <div className="private-container">
-            sdffsfdsfsdf
+            Developing..
         </div>
     );
 }
