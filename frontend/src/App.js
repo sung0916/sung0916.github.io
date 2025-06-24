@@ -5,6 +5,9 @@ import MainPage from './Layout/Pages/MainPage';
 import Welcome from './WelcomePage/Welcome';
 import About from './Layout/Pages/About/About';
 import Private from './Layout/Pages/Private/Private';
+import Skill from './Layout/Pages/Skill/Skill';
+import Portfolio from './Layout/Pages/Portfolio/Portfolio';
+import Footprint from './Layout/Pages/Footprint/Footprint';
 
 function App() {
 
@@ -15,6 +18,9 @@ function App() {
             <Route path='/main' element={<Layout/>}>
                 <Route index element={<MainPage/>}/>
                 <Route path='about' element={<About/>}/>
+                <Route path='skill' element={<Skill/>}/>
+                <Route path='portfolio' element={<Portfolio/>}/>
+                <Route path='footprint' element={<Footprint/>}/>
                 <Route path='private' element={<Private/>}/>
             </Route>
         </Routes>

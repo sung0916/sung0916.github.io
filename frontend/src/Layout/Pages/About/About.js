@@ -1,5 +1,6 @@
 import './About.css';
 import '../../Layout.css';
+import OpenInfo from './OpenInfo';
 
 function About() {
 
@@ -28,6 +29,9 @@ function About() {
                     </li>
                     <li id='more-info'>
                         <span>더보기</span>
+                        {
+                            <OpenInfo/>
+                        }
                     </li>
                 </ul>
             </div>
