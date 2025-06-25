@@ -1,8 +1,13 @@
 import './About.css';
 import '../../Layout.css';
-import OpenInfo from './OpenInfo';
+import OpenInfo from './OpenInfo.js';
+import { useState } from 'react';
 
 function About() {
+    const [isInfoOpen, setIsInfoOpen] = useState(false);
+    const toggleInfoHandler = () => {
+        setIsInfoOpen(prevState => !prevState);
+    }
 
     return (
         <div>
@@ -28,10 +33,10 @@ function About() {
                         <div>+82 10 5043 2501</div>
                     </li>
                     <li id='more-info'>
-                        <span>더보기</span>
-                        {
-                            <OpenInfo/>
-                        }
+                        <span onClick={toggleInfoHandler}>
+                            {isInfoOpen ? '숨기기 ▲' : '더보기 ▼'}
+                        </span>
+                        {isInfoOpen && <OpenInfo/>}
                     </li>
                 </ul>
             </div>
