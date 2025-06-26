@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import MyCKEditor from '../../../API/CKEditor/WritePage';
+import MyCKEditor from '../../../API/CKEditor/CKEditor';
 import './Skill.css';
 import { Link } from 'react-router-dom';
 
@@ -27,7 +27,7 @@ function Skill() {
 
     return(
         <div className='skill-container'>
-            <ul>
+            <ul className='skill-menu'>
                 <li>Linux</li>
                 <li>Cloud</li>
                 <li>Java</li>
@@ -36,37 +36,33 @@ function Skill() {
                 <li>React</li>
             </ul>
             <div>
-                <ul>
+                <ul className='board-ul'>
                     <li>제목</li>
                     <li>작성일</li>
                     <li>조회수</li>
+                    <li>✂️</li>
                 </ul>
-                <ul>
-                    <li>제목</li>
-                    <li>작성일</li>
-                    <li>조회수</li>
-                </ul>
+                {
+                    <ul className='board-ul'>
+                        <li>제목</li>
+                        <li>작성일</li>
+                        <li>조회수</li>
+                        <li>
+                            <a href='#'>수정</a>/<a href='#'>삭제</a>
+                        </li>
+                    </ul>
+                }
             </div>
 
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
-                <h2>Skill & 게시판</h2>
-                {/* Link 컴포넌트를 사용하여 글쓰기 페이지로 이동 */}
+            <div className='p-w-box'>
+                <div className='paging-area'>
+                    페이지네이션 (구현 필요)
+                </div>
                 <Link to="/main/skill/write">
                     <button>글쓰기</button>
                 </Link>
-                {/* useNavigate를 사용할 경우:
-                <button onClick={goToWritePage}>글쓰기</button>
-                */}
-            </div>
-
-            <div className="editor-section"> {/* 에디터 섹션을 위한 클래스 추가 (선택 사항) */}
-                {/* 페이지네이션은 필요에 따라 이 아래나 다른 위치에 배치 */}
-                <div style={{ marginTop: '20px' }}>
-                    페이지네이션 (구현 필요)
-                </div>
             </div>
         </div>
     );
 }
-
 export default Skill;

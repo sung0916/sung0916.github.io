@@ -56,4 +56,4 @@ function WritePage({initialData = "", onChange, onReady, onBlur, onFocus}) {
     );
 }
 
-export default WritePage;
+export default CKEditor;

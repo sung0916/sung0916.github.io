@@ -8,7 +8,7 @@ import Private from './Layout/Pages/Private/Private';
 import Skill from './Layout/Pages/Skill/Skill';
 import Portfolio from './Layout/Pages/Portfolio/Portfolio';
 import Footprint from './Layout/Pages/Footprint/Footprint';
-import WritePage from './API/CKEditor/WritePage';
+import WritePage from './Layout/Pages/Skill/WritePage';
 
 function App() {
 
